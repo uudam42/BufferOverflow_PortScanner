@@ -33,3 +33,18 @@ BufferOverflow_PortScanner/
 ├── Makefile                    # Compiler instructions
 ├── .gitignore
 └── README.md                   # Project documentation
+
+## Build & Run Instructions
+
+### 1. Compile All Binaries
+
+```bash
+make
+This compiles:
+
+vuln from vuln.c
+
+safe from safe.c
+
+scanner from scanner.c
+
