@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+*.dSYM/
+
+# Executables
+vuln
+safe
+scanner
