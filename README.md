@@ -34,59 +34,17 @@ BufferOverflow_PortScanner/
 ├── .gitignore
 └── README.md                   # Project documentation
 
-Build & Run Instructions
-1. Compile All Binaries
 
+## Build & Run Instructions
+
+### 1. Compile All Binaries
+
+```bash
 make
-This compiles:
-
-vuln from vuln.c
-
-safe from safe.c
-
-scanner from scanner.c
-
-2. Buffer Overflow Demonstration
 
 ./vuln
-Follow the steps in the PDF report to trigger and inspect the buffer overflow using gdb.
-
-To run the secure version:
-
 ./safe
-3. TCP Port Scanning
-
 ./scanner <target_ip> <start_port> <end_port>
-Example:
-
-
-./scanner 127.0.0.1 20 100
-Academic Relevance
-This project illustrates key topics in system programming and security:
-
-Computer Systems: Understanding stack memory layout, compilation process, and debugging via GDB.
-
-Cybersecurity: Demonstrates a classic memory vulnerability and how it can be mitigated.
-
-Computer Networks: Implements basic TCP socket programming and connection handling across port ranges.
-
-This project serves as a foundation for learning about exploit development, secure coding practices, and reconnaissance tooling.
-
-Documentation
-For full details, code explanations, terminal outputs, and memory diagrams, please refer to the report:
-
-📄 BufferOverflow_PortScanner.pdf
-
-Example Screenshots
-Screenshots are located in the screenshots/ directory. They include:
-
-Stack memory before and after overflow
-
-Exploit triggering with gdb
-
-Secure version behavior
-
-Port scanner output on localhost
 
 
 
