@@ -33,4 +33,3 @@ BufferOverflow_PortScanner/
 ├── Makefile                    # Compiler instructions
 ├── .gitignore
 └── README.md                   # Project documentation
-</details>
