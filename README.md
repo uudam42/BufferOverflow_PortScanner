@@ -35,16 +35,3 @@ BufferOverflow_PortScanner/
 └── README.md                   # Project documentation
 
 
-## Build & Run Instructions
-
-### 1. Compile All Binaries
-
-```bash
-make
-
-./vuln
-./safe
-./scanner <target_ip> <start_port> <end_port>
-
-
-
