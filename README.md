@@ -1,22 +1,27 @@
 # BufferOverflow_PortScanner
 
-This project demonstrates foundational cybersecurity concepts through two standalone C programs: buffer overflow exploitation and TCP port scanning. It is designed for both educational and research purposes to illustrate low-level memory vulnerabilities and basic network reconnaissance techniques.
+This project implements two foundational cybersecurity techniques using C: buffer overflow exploitation and TCP port scanning. It is designed for educational and research purposes to demonstrate low-level memory vulnerabilities and basic network reconnaissance techniques.
 
 ## Project Objectives
 
-- **Security Exploitation Practice**: Demonstrates how improperly handled memory can be exploited using stack-based buffer overflows.
+The project emulates core behaviors found in system-level security and networking tools:
+
+- **Security Exploitation Practice**: Demonstrates how stack-based buffer overflows can be exploited when memory is mishandled.
 - **Network Scanning Fundamentals**: Implements a basic TCP port scanner using raw socket programming.
-- **Comparative Analysis**: Provides a secure version (`safe.c`) of the buffer overflow program to highlight defensive programming practices.
+- **Comparative Analysis**: Offers a secure version of the vulnerable program (`safe.c`) to illustrate best practices in defensive programming.
 
-## Key Components
+## Key Features
 
-| Module       | File        | Description |
-|--------------|-------------|-------------|
-| Vulnerable Program | `vuln.c` | Contains an intentional stack-based buffer overflow vulnerability for testing and demonstration. |
-| Secure Version | `safe.c` | A patched version of the same program with proper memory handling to prevent overflows. |
-| TCP Port Scanner | `scanner.c` | A standalone C tool that scans a range of TCP ports on a target IP using socket connections. |
-| Makefile | `Makefile` | Compiles all components with appropriate flags. |
-| Screenshots & Report | `screenshots/`, `BufferOverflow_PortScanner.pdf` | Contains annotated examples, GDB views, and terminal outputs. |
+### Core Components
+
+| Module             | File                   | Description                                                                 |
+|--------------------|------------------------|-----------------------------------------------------------------------------|
+| Vulnerable Program | `vuln.c`               | Contains an intentional stack-based buffer overflow vulnerability.          |
+| Secure Version     | `safe.c`               | A patched version with input validation to prevent memory corruption.       |
+| TCP Port Scanner   | `scanner.c`            | Scans a range of TCP ports on a target IP using raw sockets.                |
+| Build Script       | `Makefile`             | Compiles all three binaries: `vuln`, `safe`, and `scanner`.                 |
+| Documentation      | `BufferOverflow_PortScanner.pdf` | Full technical report with explanations and screenshots.              |
+| Screenshots        | `screenshots/`         | Contains GDB views, memory dumps, and sample output captures.              |
 
 ## Architecture Overview
 
@@ -33,5 +38,84 @@ BufferOverflow_PortScanner/
 ├── Makefile                    # Compiler instructions
 ├── .gitignore
 └── README.md                   # Project documentation
+```
+</details>
+
+## Build & Run Instructions
+
+### 1. Compile All Binaries
+
+```bash
+make
+```
+
+This compiles:
+
+- `vuln` from `vuln.c`
+- `safe` from `safe.c`
+- `scanner` from `scanner.c`
+
+---
+
+### 2. Buffer Overflow Demonstration
+
+```bash
+./vuln
+```
+
+Refer to the PDF report to follow detailed steps for triggering and inspecting the overflow using `gdb`.
+
+To run the secure version:
+
+```bash
+./safe
+```
+
+---
+
+### 3. TCP Port Scanning
+
+```bash
+./scanner <target_ip> <start_port> <end_port>
+```
+
+**Example:**
+
+```bash
+./scanner 127.0.0.1 20 100
+```
+
+This scans ports 20–100 on localhost.
+
+---
+
+## Academic Relevance
+
+This project illustrates key foundational topics across system programming and cybersecurity:
+
+- **Computer Systems**: Understanding stack memory layout, compilation, and debugging with GDB.
+- **Cybersecurity**: Demonstrates a classical memory exploit and shows mitigation with input validation.
+- **Computer Networks**: Uses raw socket programming to perform TCP port enumeration.
+
+The modular nature of this project allows for extensions into exploit development, secure coding labs, or custom scanning tools.
+
+## Documentation
+
+Refer to the included PDF report [`BufferOverflow_PortScanner.pdf`](BufferOverflow_PortScanner.pdf) for:
+
+- Code walkthroughs
+- Memory diagrams
+- GDB outputs
+- Security explanations
+
+## Example Screenshots
+
+All screenshots are located under the `screenshots/` directory and include:
+
+- Pre- and post-overflow memory layouts
+- GDB instruction pointer overwrite
+- Safe version behavior contrast
+- Terminal output from the TCP port scanner
+
 
 
