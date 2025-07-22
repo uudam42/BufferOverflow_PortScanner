@@ -108,39 +108,18 @@ Refer to the included PDF report [`BufferOverflow_PortScanner.pdf`](BufferOverfl
 - GDB outputs
 - Security explanations
 
-## Example Screenshots
+## Examples
+### 1. GDB Instruction Pointer Overwrite  
+![GDB showing non‑debug symbols and function addresses](screenshots/gdb-functions.jpg)
 
-### 1. Pre‑ and Post‑Overflow Memory Layouts  
-![Pre‑overflow memory layout](screenshots/overflow_before.png)  
-![Post‑overflow memory layout with RIP overwrite](screenshots/overflow_after.png)  
-
-### 2. GDB Instruction Pointer Overwrite  
-![GDB showing non‑debug symbols and function addresses](screenshots/gdb_overwrite.png)  
+### 2. Overflow Exploit Demonstration  
+![Overflow payload crash via Python script (bus error)](screenshots/overflow-payload.jpg)  
+![Unsafe version segfault on overflow](screenshots/segmentation-fault.jpg)
 
 ### 3. Safe Version Behavior Contrast  
-![Safe version using `fgets` instead of `gets`](screenshots/safe_version.png)  
+![Safe version using fgets – no crash](screenshots/Safe.jpg)
 
 ### 4. TCP Port Scanner Output  
-![Terminal output from the TCP port scanner](screenshots/port_scanner.png)  
-
-
-## Example Screenshots
-
-All screenshots are located under the `screenshots/` directory and include:
-
-- Pre- and post-overflow memory layouts
-- ![overflow-payload](https://github.com/user-attachments/assets/a90e32c7-3d29-4921-91d8-d2dd757f106c)
-
-- GDB instruction pointer overwrite
-- ![gdb-functions](https://github.com/user-attachments/assets/6d77b691-5cfd-4b0b-bf18-fb31b1ffa143)
-
-- Safe version behavior contrast
-- ![Safe](https://github.com/user-attachments/assets/dae71e2c-482e-4f29-aa6a-2f7786ea0eec)
-- ![segmentation-fault](https://github.com/user-attachments/assets/42746438-3862-4740-a985-9c4223a69f69)
-
-- Terminal output from the TCP port scanner
-- ![scanner_success_open_port](https://github.com/user-attachments/assets/048de9d1-ab9b-4dcd-89fc-17c5c468d938)
-
-
+![Terminal output from the TCP port scanner](screenshots/scanner_success_open_port..jpg)
 
 
