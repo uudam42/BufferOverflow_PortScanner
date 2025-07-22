@@ -113,9 +113,18 @@ Refer to the included PDF report [`BufferOverflow_PortScanner.pdf`](BufferOverfl
 All screenshots are located under the `screenshots/` directory and include:
 
 - Pre- and post-overflow memory layouts
+  ![overflow-payload](https://github.com/user-attachments/assets/a90e32c7-3d29-4921-91d8-d2dd757f106c)
+
 - GDB instruction pointer overwrite
+  ![gdb-functions](https://github.com/user-attachments/assets/6d77b691-5cfd-4b0b-bf18-fb31b1ffa143)
+
 - Safe version behavior contrast
+  ![Safe](https://github.com/user-attachments/assets/dae71e2c-482e-4f29-aa6a-2f7786ea0eec)
+  ![segmentation-fault](https://github.com/user-attachments/assets/42746438-3862-4740-a985-9c4223a69f69)
+
 - Terminal output from the TCP port scanner
+  ![scanner_success_open_port](https://github.com/user-attachments/assets/048de9d1-ab9b-4dcd-89fc-17c5c468d938)
+
 
 
 
