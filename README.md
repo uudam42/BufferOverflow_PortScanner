@@ -110,6 +110,22 @@ Refer to the included PDF report [`BufferOverflow_PortScanner.pdf`](BufferOverfl
 
 ## Example Screenshots
 
+### 1. Pre‑ and Post‑Overflow Memory Layouts  
+![Pre‑overflow memory layout](screenshots/overflow_before.png)  
+![Post‑overflow memory layout with RIP overwrite](screenshots/overflow_after.png)  
+
+### 2. GDB Instruction Pointer Overwrite  
+![GDB showing non‑debug symbols and function addresses](screenshots/gdb_overwrite.png)  
+
+### 3. Safe Version Behavior Contrast  
+![Safe version using `fgets` instead of `gets`](screenshots/safe_version.png)  
+
+### 4. TCP Port Scanner Output  
+![Terminal output from the TCP port scanner](screenshots/port_scanner.png)  
+
+
+## Example Screenshots
+
 All screenshots are located under the `screenshots/` directory and include:
 
 - Pre- and post-overflow memory layouts
